@@ -1,0 +1,196 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000000, #1E0445, #3E0B8E);}
+.container {
+  display: flex;
+  width: 100%;
+  gap: 2px;
+  padding: 10px;
+  max-width: 1050px;
+  border: 1px solid #8e3cec;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+section {
+  background: #fff;
+  border-radius: 7px;
+  
+}
+.tools-board {
+  width: 280px;
+  padding: 13px 13px 0;
+
+}
+.tools-board .row {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.row .options {
+  list-style: none;
+  margin: 10px 0 0 5px;
+}
+.row .options .option {
+  display: flex;
+
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.option :where(span, label) {
+  color: #5a6168;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.option:is(:hover, .active) :where(span, label) {
+  color: #8e3cec;
+}
+.option #fill-color {
+  cursor: pointer;
+  height: 14px;
+  width: 14px;
+}
+#fill-color:checked ~ label {
+  color: #8e3cec;
+}
+.option #size-slider {
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+.colors .options {
+  display: flex;
+  justify-content: space-between;
+
+}
+.colors .option {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 3px;
+  position: relative;
+  margin-right: 10px;
+
+}
+.colors .option:nth-child(1) {
+  background-color: #fff;
+  border: 1px solid #bfbfbf;
+}
+.colors .option:nth-child(2) {
+  background-color: #000;
+}
+.colors .option:nth-child(3) {
+  background-color: #e02020;
+}
+
+.colors .option:nth-child(4) {
+  background-color: #E0FF70;
+}
+.colors .option:nth-child(5) {
+  background-color: #4a98f7;
+}
+.colors .option.selected::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 12px;
+  width: 12px;
+  background: inherit;
+  border-radius: inherit;
+  border: 2px solid #fff;
+  transform: translate(-50%, -50%);
+}
+.colors .option:first-child.selected::before {
+  border-color: #ccc;
+}
+.option #color-picker {
+  opacity: 0;
+  cursor: pointer;
+}
+.buttons button {
+  height: 45px;
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  margin-bottom: 13px;
+  background: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+.buttons .clear-canvas {
+  color: #8e3cec;
+  border: 1px solid #8e3cec;
+  transition: all 0.3s ease;
+  
+}
+.clear-canvas:hover {
+  color: #fff;
+  background: #8e3cec;
+}
+.buttons .save-img {
+  background: #8e3cec;
+  border: 1px solid #8e3cec;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+.drawing-board {
+  flex: 1;
+  overflow: hidden;
+}
+.drawing-board canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.option #size-slider {
+    width: 100%;
+    height: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #8e3cec; 
+    appearance: none; 
+    border-radius: 10px;
+  }
+  
+
+  .option #size-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background-color: #8e3cec; 
+    border-radius: 5px; 
+  }
+  
+
+  .option #size-slider::-webkit-slider-thumb {
+    width: 15px; 
+    height: 15px; 
+    background-color: #fff; 
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer; 
+    -webkit-appearance: none; 
+    margin-top: -5px; 
+    border: 1px solid #8e3cec;
+  }
+  .title {
+    font-size: 1.2rem; 
+    color: #8e3cec; 
+    margin-bottom: 10px; 
+    font-weight: bold; 
+  }
