@@ -20,22 +20,23 @@ body {
   max-width: 1050px;
   border: 1px solid #8e3cec;
   border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
   
 }
 section {
   background: #fff;
-  border-radius: 7px;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
   
 }
 .tools-board {
-  width: 280px;
+  width: 270px;
   padding: 13px 13px 0;
 
 }
 .tools-board .row {
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 .row .options {
   list-style: none;
@@ -43,14 +44,13 @@ section {
 }
 .row .options .option {
   display: flex;
-
   cursor: pointer;
   align-items: center;
   margin-bottom: 10px;
 }
 
 .option :where(span, label) {
-  color: #5a6168;
+  color: #b4b4b4;
   cursor: pointer;
   padding-left: 10px;
 }
@@ -81,8 +81,6 @@ section {
   border-radius: 50%;
   margin-top: 3px;
   position: relative;
-  margin-right: 10px;
-
 }
 .colors .option:nth-child(1) {
   background-color: #fff;
@@ -152,6 +150,10 @@ section {
 .drawing-board {
   flex: 1;
   overflow: hidden;
+  border-top-left-radius:7px ;
+  border-bottom-left-radius:7px ;
+  border-top-right-radius:0px ;
+  border-bottom-right-radius:0px ;
 }
 .drawing-board canvas {
   width: 100%;
@@ -195,3 +197,7 @@ section {
     margin-bottom: 10px; 
     font-weight: bold; 
   }
+
+
+
+
